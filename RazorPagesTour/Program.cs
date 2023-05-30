@@ -17,6 +17,7 @@ public class Program
         }
         
         app.UseHttpsRedirection();
+        //app.UseHttpLogging();
         app.UseStaticFiles();
         app.UseRouting();
         app.UseHttpLogging();

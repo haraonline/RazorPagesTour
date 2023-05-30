@@ -6,6 +6,8 @@ namespace RazorPagesTour.Pages
     public class PrivacyModel : PageModel
     {
         private readonly ILogger<PrivacyModel> _logger;
+        public string Message { get; set; }
+
 
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
@@ -16,7 +18,7 @@ namespace RazorPagesTour.Pages
         {
             //handles the logic for all get requests to this page
             _logger.LogInformation("Privacy page visited.");
-            Console.WriteLine("privacy page is clicked");
+            Message = "Privacy page visited at " + DateTime.Now.ToLongTimeString();
         }
     }
 }
